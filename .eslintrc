@@ -1,0 +1,52 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "comma-dangle": [
+      2,
+      "always"
+    ],
+    "curly": 2,
+    "dot-location": [
+      2,
+      "property"
+    ],
+    "dot-notation": 2,
+    "eqeqeq": [
+      2,
+      "smart"
+    ],
+    "key-spacing": [
+      1, {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "guard-for-in": 2,
+    "no-caller": 2,
+    "no-constant-condition": 2,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-else-return": 2,
+    "no-empty": 2,
+    "no-empty-character-class": 2,
+    "no-empty-label": 2,
+    "no-eval": 2,
+    "no-ex-assign": 2,
+    "no-extra-semi": 2,
+    "no-floating-decimal": 2,
+    "no-func-assign": 2,
+    "no-implied-eval": 2,
+    "no-invalid-regexp": 2,
+    "no-native-reassign": 2,
+    "no-obj-calls": 2,
+    "no-redeclare": 2,
+    "no-regex-spaces": 2,
+    "no-return-assign": 2,
+    "no-unreachable": 2,
+    "no-with": 2,
+    "semi": 2,
+    "use-isnan": 2,
+    "wrap-iife": 2
+  }
+}
