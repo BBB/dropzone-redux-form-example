@@ -1,14 +1,6 @@
 # dropzone-redux-form-example
 
-Collaborating on this React app:
-
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with npm)
-* [nwb](https://github.com/insin/nwb/) - `npm install -g nwb`
+An example for integrating [ react dropzone](https://github.com/okonet/react-dropzone) and [redux-form](https://github.com/erikras/redux-form) within a simple react app.
 
 ## Installation
 
@@ -18,10 +10,10 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `nwb serve` will run the app
+* `npm start` will run the app
 * Visit the app at [http://localhost:3000](http://localhost:3000)
 
 ### Building
 
-* `nwb build` (production)
-* `nwb build --set-env-NODE_ENV=development` (development)
+* `npm run build` (production)
+* `npm run build --set-env-NODE_ENV=development` (development)
