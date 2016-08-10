@@ -53,6 +53,11 @@ export default class SimpleForm extends Component {
             >
               <div>Try dropping some files here, or click to select files to upload.</div>
             </Dropzone>
+            { files && Array.isArray(files.value) && (
+              <ul>
+                { files.value.map((file, i) => <li key={i}>{file.name}</li>) }
+              </ul>
+            ) }
           </div>
         </div>
         <div>
