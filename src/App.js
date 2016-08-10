@@ -3,7 +3,9 @@ import { reduxForm, } from 'redux-form';
 
 import Dropzone from 'react-dropzone';
 
-export const fields = ['files',];
+const FILE_FIELD_NAME = 'files';
+
+export const fields = [FILE_FIELD_NAME,];
 
 @reduxForm({
   form: 'simple',
@@ -34,10 +36,11 @@ export default class SimpleForm extends Component {
 
   render() {
     const {
-      fields: { files, },
+      fields,
       handleSubmit,
       resetForm,
     } = this.props;
+    const files = fields[FILE_FIELD_NAME];
     return (
       <form onSubmit={ handleSubmit }>
         <div>
