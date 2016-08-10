@@ -25,6 +25,8 @@ export default class SimpleForm extends Component {
       body.append(key, data[ key ]);
     });
 
+    console.info('POST', body, data);
+    console.info('This is expected to fail:');
     fetch(`http://example.com/send/`, {
       method: 'POST',
       body: body,
