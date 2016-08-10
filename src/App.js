@@ -47,7 +47,6 @@ export default class SimpleForm extends Component {
           <label>Files</label>
           <div>
             <Dropzone
-              { ...files }
               onDrop={ ( filesToUpload, e ) => files.onChange(filesToUpload) }
             >
               <div>Try dropping some files here, or click to select files to upload.</div>
