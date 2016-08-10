@@ -15,7 +15,6 @@ export default class SimpleForm extends Component {
     fields: PropTypes.object.isRequired,
     handleSubmit: PropTypes.func.isRequired,
     resetForm: PropTypes.func.isRequired,
-    submitting: PropTypes.bool.isRequired,
   };
 
   handleSubmit(data) {
@@ -38,7 +37,6 @@ export default class SimpleForm extends Component {
       fields: { files, },
       handleSubmit,
       resetForm,
-      submitting,
     } = this.props;
     return (
       <form onSubmit={ handleSubmit }>
@@ -55,13 +53,11 @@ export default class SimpleForm extends Component {
         </div>
         <div>
           <button
-            disabled={ submitting }
             onClick={ handleSubmit(::this.handleSubmit) }
           >
-            { submitting ? <i/> : <i/> } Submit
+            Submit
           </button>
           <button
-            disabled={ submitting }
             onClick={ resetForm }
           >
             Clear Values
