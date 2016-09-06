@@ -40,7 +40,7 @@ class App extends Component {
     } = this.props;
     const files = fields[FILE_FIELD_NAME];
     return (
-      <form onSubmit={ handleSubmit }>
+      <form onSubmit={ handleSubmit(this.handleSubmit.bind(this)) }>
         <div>
           <label>Files</label>
           <div>
@@ -57,9 +57,7 @@ class App extends Component {
           </div>
         </div>
         <div>
-          <button
-            onClick={ handleSubmit(this.handleSubmit.bind(this)) }
-          >
+          <button type="submit">
             Submit
           </button>
           <button
