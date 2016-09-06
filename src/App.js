@@ -12,7 +12,7 @@ class App extends Component {
   static propTypes = {
     fields: PropTypes.object.isRequired,
     handleSubmit: PropTypes.func.isRequired,
-    resetForm: PropTypes.func.isRequired,
+    reset: PropTypes.func.isRequired,
   };
 
   onSubmit(data) {
@@ -36,7 +36,7 @@ class App extends Component {
     const {
       fields,
       handleSubmit,
-      resetForm,
+      reset,
     } = this.props;
     const files = fields[FILE_FIELD_NAME];
     return (
@@ -60,9 +60,7 @@ class App extends Component {
           <button type="submit">
             Submit
           </button>
-          <button
-            onClick={ resetForm }
-          >
+          <button onClick={ reset }>
             Clear Values
           </button>
         </div>
