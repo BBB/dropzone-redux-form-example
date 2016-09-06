@@ -5,12 +5,10 @@ import Dropzone from 'react-dropzone';
 
 const FILE_FIELD_NAME = 'files';
 
-export const fields = [FILE_FIELD_NAME,];
 
 class App extends Component {
 
   static propTypes = {
-    fields: PropTypes.object.isRequired,
     handleSubmit: PropTypes.func.isRequired,
     reset: PropTypes.func.isRequired,
   };
@@ -34,11 +32,9 @@ class App extends Component {
 
   render() {
     const {
-      fields,
       handleSubmit,
       reset,
     } = this.props;
-    const files = fields[FILE_FIELD_NAME];
     return (
       <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
         <div>
@@ -71,5 +67,4 @@ class App extends Component {
 
 export default reduxForm({
   form: 'simple',
-  fields,
 })(App);
