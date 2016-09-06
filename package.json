@@ -1,23 +1,25 @@
 {
   "name": "dropzone-redux-form-example",
   "version": "1.0.0",
-  "description": "Describe dropzone-redux-form here",
   "private": true,
-  "scripts": {
-    "build": "nwb build",
-    "clean": "nwb clean",
-    "start": "nwb serve"
+  "devDependencies": {
+    "react-scripts": "0.4.1"
   },
   "dependencies": {
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "react-dropzone": "^3.5.3",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-form": "^5.3.2"
   },
-  "devDependencies": {
-    "nwb": "0.7.x"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/react-scripts/config/eslint.js"
   },
   "author": "Ollie Relph <ollie@relph.me> (https://github.com/BBB)",
   "license": "MIT",

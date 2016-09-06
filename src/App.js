@@ -7,11 +7,7 @@ const FILE_FIELD_NAME = 'files';
 
 export const fields = [FILE_FIELD_NAME,];
 
-@reduxForm({
-  form: 'simple',
-  fields,
-})
-export default class SimpleForm extends Component {
+class App extends Component {
 
   static propTypes = {
     fields: PropTypes.object.isRequired,
@@ -62,7 +58,7 @@ export default class SimpleForm extends Component {
         </div>
         <div>
           <button
-            onClick={ handleSubmit(::this.handleSubmit) }
+            onClick={ handleSubmit(this.handleSubmit.bind(this)) }
           >
             Submit
           </button>
@@ -76,3 +72,8 @@ export default class SimpleForm extends Component {
     );
   }
 }
+
+export default reduxForm({
+  form: 'simple',
+  fields,
+})(App);
