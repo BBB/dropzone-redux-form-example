@@ -15,7 +15,7 @@ class App extends Component {
     resetForm: PropTypes.func.isRequired,
   };
 
-  handleSubmit(data) {
+  onSubmit(data) {
     var body = new FormData();
     Object.keys(data).forEach(( key ) => {
       body.append(key, data[ key ]);
@@ -40,7 +40,7 @@ class App extends Component {
     } = this.props;
     const files = fields[FILE_FIELD_NAME];
     return (
-      <form onSubmit={ handleSubmit(this.handleSubmit.bind(this)) }>
+      <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
         <div>
           <label>Files</label>
           <div>
