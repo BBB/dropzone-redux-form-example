@@ -5,14 +5,13 @@ import Dropzone from 'react-dropzone';
 
 const FILE_FIELD_NAME = 'files';
 
-
 const renderDropzoneInput = (field) => {
   const files = field.input.value;
   return (
     <div>
       <Dropzone
         name={field.name}
-        onDrop={ ( filesToUpload, e ) => field.input.onChange(filesToUpload)}
+        onDrop={( filesToUpload, e ) => field.input.onChange(filesToUpload)}
       >
         <div>Try dropping some files here, or click to select files to upload.</div>
       </Dropzone>
@@ -58,7 +57,7 @@ class App extends Component {
       reset,
     } = this.props;
     return (
-      <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <div>
           <label htmlFor={FILE_FIELD_NAME}>Files</label>
           <Field
@@ -70,7 +69,7 @@ class App extends Component {
           <button type="submit">
             Submit
           </button>
-          <button onClick={ reset }>
+          <button onClick={reset}>
             Clear Values
           </button>
         </div>
